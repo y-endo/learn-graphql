@@ -1,0 +1,16 @@
+{
+  "name": "learn-graphql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start01": "node ./01/src/app.js"
+  },
+  "repository": "https://github.com/y-endo/learn-graphql.git",
+  "author": "YukiEndo",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server-express": "^2.9.15",
+    "express": "^4.17.1",
+    "graphql": "^14.5.8"
+  }
+}
