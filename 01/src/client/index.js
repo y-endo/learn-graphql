@@ -9,15 +9,14 @@ const client = new ApolloClient({
   })
 });
 
-console.log(client);
-
 client
   .query({
     query: gql`
       {
-        todos {
+        users {
           id
-          title
+          name
+          age
         }
       }
     `
@@ -26,20 +25,18 @@ client
     console.log(result);
   });
 
-const TODO_ALL = gql`
+const users = gql`
   {
-    todos {
+    users {
       id
-      title
-      description
-      deadline
-      isComplete
+      name
+      age
     }
   }
 `;
 
 const ToDo = () => {
-  const { loading, error, data } = useQuery(TODO_ALL);
+  const { loading, error, data } = useQuery(users);
 
   console.log(loading, error, data);
 
@@ -49,9 +46,8 @@ const ToDo = () => {
   return data.todos.map(todo => {
     return (
       <div key={todo.id}>
-        <p>{todo.title}</p>
-        <p>{todo.description}</p>
-        <input type="date" readOnly disabled value={todo.deadline} />
+        <p>{todo.name}</p>
+        <p>{todo.age}</p>
       </div>
     );
   });
