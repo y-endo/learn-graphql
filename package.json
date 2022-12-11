@@ -13,7 +13,7 @@
     "@apollo/client": "^3.0.0-beta.20",
     "apollo-boost": "^0.4.7",
     "apollo-server-express": "^2.9.15",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "graphql": "^14.5.8",
     "graphql-subscriptions": "^1.1.0",
     "graphql-tag": "^2.10.1",
